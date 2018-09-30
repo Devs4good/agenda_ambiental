@@ -149,3 +149,8 @@ ul.no-style {
 #form-contacto .row {
     margin-bottom: 1rem;
 }
+
+.info-link {
+    color: #cf7d33;
+    text-decoration: underline;
+}
