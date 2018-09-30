@@ -2,6 +2,15 @@ body {
     font-family: Roboto;
 }
 
+.logo {
+    max-height: 95px;
+    max-width: 160px;
+}
+
+.logo-footer {
+    max-width: 18vw;
+}
+
 #titulo-agenda {
     display: flex;
     justify-content: space-between;
