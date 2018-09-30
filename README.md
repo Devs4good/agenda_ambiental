@@ -1,5 +1,11 @@
 # Agenda ambiental
 
+## Mockups
+
+El diseño está hecho en Zeplin: https://zpl.io/am4lMDm
+El maquetado está hecho en la carpeta `web` en este repo
+
+
 ## Consideraciones para Wordpress
 
 1. No actualilzar el theme (porque no está hecho un child-theme)
