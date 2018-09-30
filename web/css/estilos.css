@@ -1,0 +1,151 @@
+body {
+    font-family: Roboto;
+}
+
+#titulo-agenda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#titulo-agenda span {
+  font-size: 4.5vw;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #212121;
+}
+
+.no-border {
+    border: none;
+}
+
+.carousel-inner {
+    max-width: 1144px;
+    max-height: 570px;
+}
+
+
+.event-image {
+    max-width: 262px;
+    height: 262px;
+}
+
+
+.nombre-evento {
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: bold;
+}
+
+.descripcion-evento {
+    font-family: Roboto;
+}
+
+.badge-tipo-evento {
+    background-color: #cf7d33;
+    color: white;
+    padding: 0.8em;
+    margin-right: 3em;
+    text-transform: uppercase;
+}
+
+.badge-tipo-evento.dark {
+    background-color: #212121;
+    position: relative;
+    bottom: 1rem;
+    margin-right: 0;
+    max-width: 50%;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .badge-tipo-evento.dark {
+        max-width: 80%;
+    }
+}
+
+.container-floating-badge .card-body {
+    padding-top: 0;
+}
+
+.atributos-evento {
+    margin-top: 7vh;
+}
+
+.atributos-evento li {
+    margin-bottom: 3vh;
+}
+
+.green-icon {
+    color: #8fa702;
+}
+
+.round-button {
+    border-radius: 52px;
+    background-color: #8fa702;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.5em;
+    width: 100%;
+    max-width: 170px;
+}
+
+.round-button-outline {
+    border-radius: 52px;
+    color: #8fa702;
+    border: solid 2px #8fa702;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 0.5em;
+    width: 100%;
+    max-width: 170px;
+}
+
+.sidebar {
+    border-right: solid 1px #d8d8d8;
+
+}
+
+ul.no-style {
+    padding-left: 0;
+    list-style: none;
+}
+
+.sidebar li {
+    padding-bottom: 1rem;
+}
+
+.sidebar .section-title {
+    color: #212121;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+
+.footer {
+    margin-top: 2em;
+    border-top: 2px solid #5ed3cd;
+    padding-top: 2em;
+}
+
+.footer .footer-subtitle {
+    padding-left: 0;
+    font-weight: bold;
+    color: #cf7d33;
+    border-bottom: 2px solid #5ed3cd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer li {
+    padding-bottom: 0.5rem;
+}
+
+#form-contacto .row {
+    margin-bottom: 1rem;
+}

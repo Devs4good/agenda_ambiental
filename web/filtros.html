@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+    <title>Filtros</title>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+        <!-- Robot font -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <!-- Custom styles -->
+        <link rel="stylesheet"  href="./css/estilos.css">
+    </head>
+
+    <body>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="./imagenes/logo.jpg">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Agenda <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Eventos destacados <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Quienes somos <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <br />
+
+        <div class="container">
+            <div id="titulo-agenda">
+                <span>Agenda</span>
+                <button class="btn round-button-outline">Agregar evento</button>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-2 col-sm-4 sidebar">
+                    <div class="section-title">Categorías</div>
+                    <ul class="no-style">
+                        <li>Charlas</li>
+                        <li>Cursos</li>
+                        <li>Ferias</li>
+                        <li>Jornadas</li>
+                        <li>Talleres</li>
+                        <li>Voluntariados</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card no-border container-floating-badge">
+                                <img class="card-img-top event-image" src="./imagenes/evento1.jpg" alt="Card image cap">
+                                <span class="badge badge-tipo-evento dark">Festival</span>
+                                <div class="card-body">
+                                    <p class="card-title nombre-evento">Evento 1</p>
+                                    <p class="card-text descripcion-evento">Jueves 12 de Septiembre</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card no-border container-floating-badge">
+                                <img class="card-img-top event-image" src="./imagenes/evento2.jpg" alt="Card image cap">
+                                <span class="badge badge-tipo-evento dark">Charla</span>
+                                <div class="card-body">
+                                    <p class="card-title nombre-evento">Evento 2</p>
+                                    <p class="card-text descripcion-evento">Jueves 12 de Septiembre</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card no-border container-floating-badge">
+                                <img class="card-img-top event-image" src="./imagenes/evento3.jpg" alt="Card image cap">
+                                <span class="badge badge-tipo-evento dark">Voluntariado</span>
+                                <div class="card-body">
+                                    <p class="card-title nombre-evento">Evento 3</p>
+                                    <p class="card-text descripcion-evento">Jueves 12 de Septiembre</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card no-border container-floating-badge">
+                                <img class="card-img-top event-image" src="./imagenes/evento1.jpg" alt="Card image cap">
+                                <span class="badge badge-tipo-evento dark">Festival</span>
+                                <div class="card-body">
+                                    <p class="card-title nombre-evento">Evento 4</p>
+                                    <p class="card-text descripcion-evento">Jueves 12 de Septiembre</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row footer">
+                <div class="col-md-1">
+                    <img src="./imagenes/logo.jpg"/>
+                </div>
+                <div class="offset-md-2 col-md-4">
+                    <div class="row">
+                        <div class="col footer-subtitle">
+                            Agenda
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 pl-sm-0">
+                            <ul class="no-style">
+                                <li>Ferias</li>
+                                <li>Charlas</li>
+                                <li>Talleres</li>
+                            </ul>
+                        </div>
+                        <div class="col-6 pl-sm-0">
+                            <ul class="no-style">
+                                <li>Jornadas</li>
+                                <li>Voluntariados</li>
+                                <li>Cursos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="offset-md-1 col-md-4">
+                    <div class="row">
+                        <div class="col footer-subtitle">
+                            Contacto
+                        </div>
+                    </div>
+                    <div id="form-contacto" class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" placeholder="Nombre">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" placeholder="Apellido">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <textarea class="form-control" placeholder="Mensaje" rows="2"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="offset-sm-8 col-sm-4">
+                                    <button class="btn round-button">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
