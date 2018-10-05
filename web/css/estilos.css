@@ -1,5 +1,5 @@
 body {
-    font-family: Roboto;
+    font-family: Roboto, serif;
 }
 
 .logo {
@@ -38,20 +38,36 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
   }
-#titulo-agenda {
+
+
+.titulo {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
 }
 
-#titulo-agenda span {
-  font-size: 4.5vw;
+@media (min-width: 768px) {
+    .titulo {
+        margin-top: 8rem;
+    }
+}
+
+.titulo span {
+  font-size: 7vw;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
   color: #212121;
+}
+
+@media (min-width: 768px) {
+    .titulo span {
+        font-size: 6vh;
+    }
 }
 
 .no-border {
@@ -65,22 +81,16 @@ body {
 
 
 .event-image {
-    max-width: 262px;
     height: 262px;
 }
 
 
 .nombre-evento {
-  font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
   font-weight: bold;
-}
-
-.descripcion-evento {
-    font-family: Roboto;
 }
 
 .badge-tipo-evento {
@@ -374,4 +384,30 @@ border-color:transparent;
 }
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.titulo-sobre-imagen {
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 50%);
+}
+
+.categoria {
+    position: relative;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .contendedor-cuadros>div {
+        height: 50vw;
+    }
+
+    .titulo-sobre-imagen {
+        font-size: 1.5rem;
+    }
 }
