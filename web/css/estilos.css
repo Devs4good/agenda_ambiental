@@ -367,3 +367,33 @@ border-color:transparent;
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+/* evento */
+
+#evento{
+    margin-top: 3em;
+}
+
+.back-arrow {
+    font-size: 40px;
+    padding: 1rem;
+    color: #8fa702;
+}
+
+.inter{
+    font-size: 1.5rem;
+    position: relative;
+    display: inline;
+    align-self: flex-end;
+    padding-bottom: 1rem;
+}
+
+.inter i{
+    padding: 1rem;
+    color: #8fa702;
+}
+
+#myCanvas{
+    background-image: url("imagenes/evento1.jpg")
+}
