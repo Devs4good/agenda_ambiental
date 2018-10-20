@@ -18,17 +18,25 @@ body {
     max-width: 160px;
     background-image: url("../imagenes/logo.png");
     background-repeat: no-repeat;
-    background-position-x: -10px;
+    background-size: 110px;
+    background-position: center;
 }
-  
+.navbar{
+      box-shadow: 0 3px 20px 0 rgba(0,0,0,.25);
+}
+#navbarSupportedContent li:hover{
+  border-bottom: 2px solid #8fa702;
+}
+.inputborder{
+  border: 1px solid black;
+}
 .line-logo {
     width: 200px;
     height: 35px;
     max-height: 95px;
-    background-image: url("../imagenes/logolinea.jpeg");
+    background-image: url("../imagenes/logolinea.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: 200px;
   }
 #titulo-agenda {
     display: flex;
@@ -190,23 +198,23 @@ ul.no-style {
 
     border-radius: 52px;
     background-color: #8fa702;
-    
+
     color: #fff;
 }
 
 #graphicsdesign{
     background-color: #8fa702;
-    
+
 }
 
 #difusion{
     background-color: #8fa702;
-    
+
     width: 50%;
 }
 #orgeventos{
     background-color: #8fa702;
-    
+
 }
 
 .contactrow{
