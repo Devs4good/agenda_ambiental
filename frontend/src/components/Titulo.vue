@@ -1,7 +1,7 @@
 <template>
-  <div id="titulo-agenda">
-    <span>Agenda</span>
-    <boton-redondeado texto="Agregar evento" outline="true"></boton-redondeado>
+  <div>
+    <span>{{ texto }}</span>
+    <boton-redondeado v-if="textoBoton" :texto="textoBoton" outline="true"></boton-redondeado>
   </div>
 </template>
 
@@ -9,19 +9,22 @@
 import BotonRedondeado from './BotonRedondeado'
 
 export default {
-  name: 'TituloAgenda',
+  name: 'Titulo',
+  props: ['texto', 'textoBoton'],
   components: {BotonRedondeado}
 }
 </script>
 
-<style>
-  #titulo-agenda {
+<style scoped>
+  div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
   }
 
-  #titulo-agenda span {
+  div span {
     font-size: 4.5vw;
     font-weight: bold;
     font-style: normal;
@@ -29,5 +32,11 @@ export default {
     line-height: normal;
     letter-spacing: normal;
     color: #212121;
+  }
+
+  @media (max-width: 768px) {
+    div span {
+      font-size: 6vh;
+    }
   }
 </style>

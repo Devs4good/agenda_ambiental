@@ -1,25 +1,22 @@
 <template>
-  <div>
-    <titulo-agenda></titulo-agenda>
+  <div id="contenedor">
+    <titulo texto="Agenda" texto-boton="Agregar evento"></titulo>
     <eventos></eventos>
   </div>
 </template>
 
 <script>
-import TituloAgenda from './TituloAgenda'
+import Titulo from './Titulo'
 import Eventos from './Eventos'
 
 export default {
   name: 'Agenda',
-  components: {
-    TituloAgenda,
-    Eventos
-  }
+  components: { Titulo, Eventos }
 }
 </script>
 
 <style scoped>
-  div {
+  #contenedor {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
   }
