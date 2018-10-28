@@ -9,60 +9,19 @@
 
 <script>
 import Evento from './Evento'
+import EventosRestAPI from '../models/EventosRestAPIStub'
 
 export default {
   name: 'Eventos',
   data () {
-    return {
-      eventos: [
-        {
-          id: 1,
-          titulo: 'Experiencia despierta',
-          fechaYHoraDeInicio: new Date(),
-          tipo: 'charla',
-          imagen: 'https://tinyurl.com/yd6sp2tk'
-        },
-        {
-          id: 2,
-          titulo: 'Paisaje natural',
-          fechaYHoraDeInicio: new Date(),
-          tipo: 'taller',
-          imagen: 'https://tinyurl.com/yd7ouvuk'
-        },
-        {
-          id: 3,
-          titulo: 'Parque de la estación',
-          fechaYHoraDeInicio: new Date(),
-          tipo: 'charla',
-          imagen: 'https://tinyurl.com/ybbn5ahe'
-        },
-        {
-          id: 4,
-          titulo: 'Jornada de Práctica en Instalación Fotovoltica',
-          fechaYHoraDeInicio: new Date(),
-          tipo: 'jornada',
-          imagen: 'https://tinyurl.com/yd4dekyq'
-        },
-        {
-          id: 5,
-          titulo: 'Somos semilla',
-          fechaYHoraDeInicio: new Date(),
-          tipo: 'festival',
-          imagen: 'https://tinyurl.com/yanyyzfn'
-        },
-        {
-          id: 6,
-          titulo: 'Limpieza de playas del centro en MDQ',
-          fechaYHoraDeInicio: new Date(),
-          tipo: 'voluntariado',
-          imagen: 'https://tinyurl.com/ycfhb57o'
-        }
-      ]
-    }
+    return { eventos: [] }
   },
-  components: {
-    Evento
-  }
+  created () {
+    EventosRestAPI.noDestacados().then(eventosNoDestacados => {
+      this.eventos = eventosNoDestacados
+    })
+  },
+  components: { Evento }
 }
 </script>
 

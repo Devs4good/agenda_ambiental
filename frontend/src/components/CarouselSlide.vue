@@ -1,12 +1,14 @@
 <template>
   <div class="carousel-item" :class="{ active: activo }">
-    <img class="d-block w-100" :src="imagen" :alt="titulo">
+    <router-link :to="{ name: 'Evento', params: { id: evento.id }}">
+      <img class="d-block w-100" :src="evento.imagen" :alt="evento.titulo">
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
   name: 'CarouselSlide',
-  props: ['titulo', 'imagen', 'activo']
+  props: ['evento', 'activo']
 }
 </script>

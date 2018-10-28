@@ -42,27 +42,18 @@
 
 <script>
 import BotonRedondeado from './BotonRedondeado'
+import EventosRestAPI from '../models/EventosRestAPIStub'
 
 export default {
   name: 'PaginaEvento',
   components: { BotonRedondeado },
   data () {
-    return {
-      evento: {
-        id: 1,
-        titulo: 'Experiencia despierta',
-        fechaYHoraDeInicio: new Date(),
-        precio: 0,
-        tipo: 'charla',
-        link: 'https://google.com',
-        imagen: 'https://tinyurl.com/yd6sp2tk',
-        localidad: 'Centro Cultura Juancito, Calle falsa 123',
-        descripcion: 'With the exception of Nietzsche, no other madman has contributed so much to human sanity as has Louis Althusser. He is mentioned twice in the Encyclopaedia Britannica as someone’s teacher. There could be no greater lapse: for two important decades (the 60s and the 70s), Althusser was at the eye of all the important cultural storms. He fathered quite a few of them.',
-        contacto: {
-          email: 'direccion@email.com'
-        }
-      }
-    }
+    return { evento: null }
+  },
+  created () {
+    EventosRestAPI.porId(this.$route.params.id).then(evento => {
+      this.evento = evento
+    })
   }
 }
 </script>

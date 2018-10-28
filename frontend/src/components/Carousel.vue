@@ -1,7 +1,7 @@
 <template>
   <div id="carouselPrincipal" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li v-for="(_, indice) in slides"
+      <li v-for="(_, indice) in eventos"
           data-target="#carouselPrincipal"
           :data-slide-on="indice"
           :class="{ active: indice === 0 }"
@@ -9,9 +9,8 @@
       </li>
     </ol>
     <div class="carousel-inner">
-      <carousel-slide v-for="(slide, indice) in slides"
-                      :titulo="slide.titulo"
-                      :imagen="slide.imagen"
+      <carousel-slide v-for="(evento, indice) in eventos"
+                      :evento="evento"
                       :activo="indice === 0"
                       :key="indice">
       </carousel-slide>
@@ -29,17 +28,17 @@
 
 <script>
 import CarouselSlide from './CarouselSlide'
+import EventosRestAPI from '../models/EventosRestAPIStub'
 
 export default {
   name: 'Carousel',
   data () {
-    return {
-      slides: [
-        { titulo: 'Primer slide', imagen: 'https://tinyurl.com/ybbn5ahe' },
-        { titulo: 'Segundo slide', imagen: 'https://tinyurl.com/yd7ouvuk' },
-        { titulo: 'Tercer slide', imagen: 'https://tinyurl.com/yd6sp2tk' }
-      ]
-    }
+    return { eventos: [] }
+  },
+  created () {
+    EventosRestAPI.destacados().then(eventosDestacados => {
+      this.eventos = eventosDestacados
+    })
   },
   components: {
     CarouselSlide
