@@ -4,12 +4,12 @@
 
 * `GET /eventos`
    
-   Trae todos los eventos y se puede filtrar por diferentes query-params:
+   Trae todos los eventos paginados y se puede filtrar por diferentes query-params:
    
-   * `destacados=[true|false]`
-   * `publicados=[true|false]`
-   * `tipo=[charla|curso|feria|jornada|taller|festival|voluntariado]`
-   * `busqueda=<término-de-búsqueda>` (busca el texo case-insensitive en el título y la descripción del evento)
+   * Cualquier atributo del evento (como `publicado=true` o `contacto.nombre=Lautaro`)
+   * `size=4` me trae el listado de a páginas de 4 eventos (el default es 20)
+   * `page=2` me trae sólo la página 2
+   * `sort=titulo,asc` me devuele los resultados ordenados por título ascendente
    
 * `GET /eventos/{id}`
 
