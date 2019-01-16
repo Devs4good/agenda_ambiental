@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="row">
-      <i class="far fa-arrow-alt-circle-left back-arrow"></i>
+    <div class="link-volver" @click="volver()">
+      &lt;&lt; <span>Volver a la agenda</span>
     </div>
     <div id="evento">
       <img :src="evento.imagen">
@@ -24,10 +24,6 @@
     </div>
 
     <div class="row">
-      <div class="col-md-2 col-sm-3 col-sm-2 offset-md-10  inter">
-        <i class="fas fa-share"></i>
-        <i class="far fa-heart"></i>
-      </div>
       <div class="col-md-2 col-sm-3 col-sm-2 offset-md-6 ">
         <div class="align-middle">
           <a class="link-informacion" :href="evento.link">Más información</a>
@@ -47,6 +43,11 @@ import EventosRestAPI from '../models/EventosRestAPIStub'
 export default {
   name: 'PaginaEvento',
   components: { BotonRedondeado },
+  methods: {
+    volver () {
+      this.$router.go(-1)
+    }
+  },
   data () {
     return { evento: null }
   },
@@ -118,6 +119,16 @@ export default {
 
   .link-informacion {
     color: #cf7d33;
+    text-decoration: underline;
+  }
+
+  .link-volver {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .link-volver span {
     text-decoration: underline;
   }
 </style>

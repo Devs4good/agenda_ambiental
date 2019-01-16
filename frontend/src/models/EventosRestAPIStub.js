@@ -172,7 +172,7 @@ export default {
   },
 
   porId (id) {
-    const eventoBuscado = this.eventos.find(evento => evento.id === id)
+    const eventoBuscado = this.eventos.find(evento => evento.id === parseInt(id))
     return eventoBuscado ? Promise.resolve(eventoBuscado) : Promise.reject(new Error('Evento no encontrado'))
   }
 }
