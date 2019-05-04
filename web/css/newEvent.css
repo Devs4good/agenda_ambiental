@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.containernewevent{
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.formevento{
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+}
+.formaddevento{
+    display: flex;
+    flex-flow: column;
+}
+.w-100{
+    width: 100% !important;
+}
+.tipneweventos{
+    display: flex;
+    width: 30%;
+}
+
+.labl{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin: .5em 0em;
+}
+.destacado{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    align-items: center;
+    font-weight: bold;
+}
+.inpdest{
+    margin-left: .5em;
+}
+.inpt{
+    height: 25px;
+    border-radius: 6px;
+    border: 1px solid #000;
+    padding: 0px 12px;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    resize: none;
+  }
+
+.flex-inline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tipneweventos{
+    display: flex;
+    flex-direction: column;
+}
+
+.tipstitles{
+    color: #badc58;
+}
+.descriptips{
+    margin-left: 2rem;
+}
+#addeventbtn{
+    align-self: flex-end;
+    margin-top: 2px;
+    width: 20%;
+    border-radius: 10px;
+    border: none;
+    background-color: #badc58;
+    height: 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+  }
+  .check:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(34,50,84,0.03);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .check svg {
+    position: relative;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #c8ccd4;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+  }
+  .check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+  }
+  .check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+  }
+  .check:hover:before {
+    opacity: 1;
+  }
+  .check:hover svg {
+    stroke: #4285f4;
+  }
+  #cbx:checked + .check svg {
+    stroke: #4285f4;
+  }
+  #cbx:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+  #cbx:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
