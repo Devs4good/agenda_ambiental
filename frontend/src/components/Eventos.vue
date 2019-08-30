@@ -9,7 +9,7 @@
 
 <script>
 import Evento from './Evento'
-import EventosRestAPI from '../models/EventosRestAPIStub'
+import EventosRestAPI from '../services/EventosRestAPIStub'
 
 export default {
   name: 'Eventos',

@@ -1,7 +1,7 @@
 <template>
   <div>
     <span>{{ texto }}</span>
-    <boton-redondeado v-if="textoBoton" :texto="textoBoton" outline="true"></boton-redondeado>
+<!--    <boton-redondeado v-if="textoBoton" :texto="textoBoton" outline="true"></boton-redondeado>-->
   </div>
 </template>
 

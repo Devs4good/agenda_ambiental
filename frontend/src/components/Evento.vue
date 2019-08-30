@@ -1,15 +1,17 @@
 <template>
   <div class="evento">
-    <img class="event-image" :src="evento.imagen" :alt="evento.titulo" @click="irAlEvento(evento)">
-    <span class="badge badge-tipo-evento dark">{{ evento.tipo }}</span>
+    <img class="event-image" :src="evento.urlImage" :alt="evento.title" @click="irAlEvento(evento)">
+    <span class="badge badge-tipo-evento dark">{{ evento.type }}</span>
     <div>
-      <p class="nombre-evento" @click="irAlEvento(evento.id)">{{ evento.titulo }}</p>
-      <p>{{ evento.fechaYHoraDeInicio }}</p>
+      <p class="nombre-evento" @click="irAlEvento(evento.id)">{{ evento.title }}</p>
+      <p>{{ formatearFecha(evento.startDate) }}</p>
     </div>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
+
 export default {
   name: 'Evento',
   props: ['evento'],
@@ -17,6 +19,10 @@ export default {
     irAlEvento (unEvento) {
       this.evento = unEvento
       this.$router.push({name: 'Evento', params: { id: unEvento.id }})
+    },
+
+    formatearFecha (epochTimestamp) {
+      return moment(epochTimestamp).format('dddd DD [de] MMMM')
     }
   }
 }

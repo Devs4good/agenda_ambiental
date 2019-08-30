@@ -28,7 +28,7 @@
 
 <script>
 import CarouselSlide from './CarouselSlide'
-import EventosRestAPI from '../models/EventosRestAPIStub'
+import EventosRestAPI from '../services/EventosRestAPIStub'
 
 export default {
   name: 'Carousel',

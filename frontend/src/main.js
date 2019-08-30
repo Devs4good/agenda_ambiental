@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import moment from 'moment'
 
+moment.locale('es')
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

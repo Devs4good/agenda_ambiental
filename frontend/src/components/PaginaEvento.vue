@@ -4,21 +4,21 @@
       &lt;&lt; <span>Volver a la agenda</span>
     </div>
     <div id="evento">
-      <img :src="evento.imagen">
+      <img :alt="evento.title" :src="evento.urlImage">
       <div class="detalles">
         <div>
-          <span class="badge">{{ evento.tipo }}</span>
-          <i class="fas fa-dollar-sign icono-verde"></i> {{ evento.precio ? evento.precio : 'Evento gratuito' }}
+          <span v-if="evento.type" class="badge">{{ evento.type }}</span>
+          <i class="fas fa-dollar-sign icono-verde"></i> {{ evento.price ? evento.price : 'Evento gratuito' }}
         </div>
 
-        <h1>{{ evento.titulo }}</h1>
-        <p id="descripcion">{{ evento.descripcion }}</p>
+        <h1>{{ evento.title }}</h1>
+        <p id="descripcion">{{ evento.description }}</p>
 
         <ul class="fa-ul atributos-evento">
-          <li><span class="fa-li"><i class="fas fa-map-marker-alt icono-verde"></i></span>{{ evento.localidad }}</li>
-          <li><span class="fa-li"><i class="far fa-calendar icono-verde"></i></span>{{ evento.fechaYHoraDeInicio }}</li>
-          <li><span class="fa-li"><i class="far fa-clock icono-verde"></i></span>{{ evento.fechaYHoraDeInicio }}</li>
-          <li><span class="fa-li"><i class="far fa-envelope icono-verde"></i></span>{{ evento.contacto.email }}</li>
+          <li><span class="fa-li"><i class="fas fa-map-marker-alt icono-verde"></i></span>{{ evento.address }}</li>
+          <li><span class="fa-li"><i class="far fa-calendar icono-verde"></i></span>{{ formatearFecha(evento.startDate) }}</li>
+          <li><span class="fa-li"><i class="far fa-clock icono-verde"></i></span>{{ formatearHorario(evento.startDate) }}</li>
+          <li><span class="fa-li"><i class="far fa-envelope icono-verde"></i></span>{{ evento.contact }}</li>
         </ul>
       </div>
     </div>
@@ -26,11 +26,11 @@
     <div class="row">
       <div class="col-md-2 col-sm-3 col-sm-2 offset-md-6 ">
         <div class="align-middle">
-          <a class="link-informacion" :href="evento.link">Más información</a>
+          <a class="link-informacion" :href="evento.link" target="_blank">Más información</a>
         </div>
       </div>
       <div class="col-md-2 col-sm-3 offset-sm-3 offset-md-2">
-        <boton-redondeado texto="Inscribirme"></boton-redondeado>
+<!--        <boton-redondeado texto="Inscribirme"></boton-redondeado>-->
       </div>
     </div>
   </div>
@@ -38,7 +38,8 @@
 
 <script>
 import BotonRedondeado from './BotonRedondeado'
-import EventosRestAPI from '../models/EventosRestAPIStub'
+import EventosRestAPI from '../services/EventosRestAPIStub'
+import moment from 'moment'
 
 export default {
   name: 'PaginaEvento',
@@ -46,6 +47,14 @@ export default {
   methods: {
     volver () {
       this.$router.go(-1)
+    },
+
+    formatearFecha (epochTimestamp) {
+      return moment(epochTimestamp).format('dddd DD [de] MMMM')
+    },
+
+    formatearHorario (epochTimestamp) {
+      return moment(epochTimestamp).format('HH:mm')
     }
   },
   data () {
@@ -123,8 +132,8 @@ export default {
   }
 
   .link-volver {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     cursor: pointer;
   }
 
